@@ -215,19 +215,18 @@ img { max-width: 100%; display: block; }
 .feature-section { padding: 0; background: #111; color: white; }
 .feature-grid { display: grid; grid-template-columns: 1fr 1fr; min-height: 650px; }
 .project-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  display: block;
   padding: clamp(30px, 6vw, 80px);
-  align-content: center;
+  align-self: stretch;
 }
 .gallery-image {
+  height: 100%;
+  min-height: 500px;
   margin: 0;
   overflow: hidden;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,.08);
   background: #1d1d1d;
-  aspect-ratio: 1 / 1;
 }
 .gallery-image img {
   width: 100%;
@@ -301,6 +300,7 @@ textarea { resize: vertical; }
   .split, .feature-grid, .area-inner, .booking-wrap { grid-template-columns: 1fr; }
   .split { gap: 30px; }
   .project-gallery { padding: 24px; }
+  .gallery-image { min-height: 360px; height: 360px; }
   .partner-grid { grid-template-columns: 1fr; }
   .partner-card { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -319,7 +319,8 @@ textarea { resize: vertical; }
   .trust-grid span { font-size: .72rem; }
   .booking-form { padding: 22px; }
   .feature-copy { padding: 65px 25px; }
-  .project-gallery { grid-template-columns: 1fr 1fr; gap: 10px; padding: 18px; }
+  .project-gallery { padding: 18px; }
+  .gallery-image { min-height: 300px; height: 300px; }
   .area-inner { gap: 35px; }
   .footer-bottom { flex-direction: column; }
 }

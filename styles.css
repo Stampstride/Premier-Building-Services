@@ -90,8 +90,9 @@ img { max-width: 100%; display: block; }
   max-width: 780px;
   margin: 0;
   font-size: clamp(3.1rem, 7vw, 6.4rem);
-  line-height: .95;
-  letter-spacing: -.055em;
+  line-height: 1.02;
+  letter-spacing: -.02em;
+  word-spacing: .02em;
 }
 .hero h1 span { color: var(--gold-light); }
 .hero-copy { max-width: 660px; margin: 28px 0 34px; color: #ddd; font-size: 1.12rem; }

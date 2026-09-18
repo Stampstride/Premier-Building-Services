@@ -11,7 +11,7 @@
 */
 const SITE_CONFIG = {
   businessName: "Premier Building Services",
-  serviceArea: "Montgomery, Roanoke, Franklin, and Henry Counties, as well as surrounding areas.",
+  serviceArea: "Southwest Virginia, including Montgomery, Roanoke, Franklin, and Henry Counties.",
 
   // Leave empty until a partnership/accolade is ready to be publicly announced.
   featuredPartners: [

@@ -311,7 +311,7 @@ textarea { resize: vertical; }
   .container { width: min(calc(100% - 28px), var(--max)); }
   .brand img { width: 155px; }
   .hero { min-height: 610px; }
-  .hero h1 { font-size: 3.15rem; }
+   .hero h1 { font-size: 3.15rem; line-height: 1.04; letter-spacing: -.015em; }
   .hero-copy { font-size: 1rem; }
   .section { padding: 75px 0; }
   .service-grid, .form-row, .footer-grid { grid-template-columns: 1fr; }

@@ -1,9 +1,18 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
+const brandLink = document.querySelector(".brand");
 
 menuToggle?.addEventListener("click", () => {
   const isOpen = mainNav.classList.toggle("open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+brandLink?.addEventListener("click", event => {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  history.replaceState(null, "", "#top");
+  mainNav.classList.remove("open");
+  menuToggle?.setAttribute("aria-expanded", "false");
 });
 
 document.querySelectorAll(".main-nav a").forEach(link => {

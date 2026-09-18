@@ -21,9 +21,15 @@ const partners = SITE_CONFIG?.featuredPartners || [];
 if (partners.length) {
   partnerGrid.innerHTML = partners.map(partner => `
     <article class="partner-card">
-      <p class="eyebrow">${escapeHtml(partner.label || "Partnership")}</p>
-      <h3>${escapeHtml(partner.name)}</h3>
-      <p>${escapeHtml(partner.description || "")}</p>
+      <div class="partner-logo-wrap">
+        <img class="partner-logo" src="${escapeHtml(partner.logo || "")}" alt="${escapeHtml(partner.logoAlt || partner.name || "Partner logo")}" loading="lazy" />
+      </div>
+      <div class="partner-card-copy">
+        <p class="eyebrow">${escapeHtml(partner.label || "Commercial Service Partner")}</p>
+        <h3>${escapeHtml(partner.name)}</h3>
+        <p class="partner-year">Contracted for ${escapeHtml(partner.year || "2027")}</p>
+        <p>${escapeHtml(partner.description || "")}</p>
+      </div>
     </article>
   `).join("");
 } else {
